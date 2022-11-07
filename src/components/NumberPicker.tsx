@@ -25,7 +25,6 @@ export default function NumberPicker(): JSX.Element {
       <p>Counter: {counterValueFromCurrentRender}</p>
       <button onClick={handleSubtractOneFromCounter}>-1</button>
       <button onClick={handleAddOneToCounter}>+1</button>
-      <hr />
       <button onClick={handleStoreCurrentCount}>Store current count</button>
     </>
   );
