@@ -57,7 +57,7 @@ const EmojiList = () => {
   return (
       <p>
         <i>Previous emojis: </i>
-          {emojis.map((emoji) => {
+          {emojis.slice(-5).map((emoji) => {
               return <>{emoji}</>;
           })}
       </p>
