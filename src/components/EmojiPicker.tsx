@@ -3,15 +3,19 @@ import { useState } from "react";
 export default function EmojiPicker(): JSX.Element {
   const [counterValueFromCurrentRender, queueRerenderWithNewCounterValue] =
     useState("");
-  const [storedValuesFromCurrentRender, queueRerenderWithNewStoredValues] =
-    useState<string[]>([]);
 
-  const handleStoreCurrentCount = () => {
-    queueRerenderWithNewStoredValues([
-      ...storedValuesFromCurrentRender,
-      counterValueFromCurrentRender,
-    ]);
-  }
+    const handleStoreCurrentCount = () => {
+      queueRerenderWithNewCounterValue(counterValueFromCurrentRender);
+    }
+    
+  // const [storedValuesFromCurrentRender, queueRerenderWithNewStoredValues] =
+  //   useState<string[]>([]);
+  // const handleStoreCurrentCount = () => {
+  //   queueRerenderWithNewStoredValues([
+  //     ...storedValuesFromCurrentRender,
+  //     counterValueFromCurrentRender,
+  //   ]);
+  // }
 
 
   const handleEmojiLove = () => {
